@@ -2,15 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 html,body{
     height: 100%;
-
     width: 100%;
 }
 
-.weather-card {
+body{
+  background-color: cornsilk;
+}
+
+.searchbar{
+  border: 1px solid black;
+}
+
+/* .weather-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -81,4 +91,8 @@ html,body{
   #form input{
     margin-top: 20px;
     
-  }
+  } */
+ 
+
+
+
