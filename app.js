@@ -1,16 +1,16 @@
 const form =document.querySelector('form');
 const search =document.querySelector('#search');
 const card = document.querySelector("#card");
-
-
+let arrCard;
+let arr=[];
 form.addEventListener("submit", (evt)=>{
     evt.preventDefault()
-    axios(`http://api.weatherapi.com/v1/current.json?key=3fe4c4377a554e6684152455241406&q=${search.value}&aqi=no
-    
+    axios(`http://api.weatherapi.com/v1/current.json?key=3fe4c4377a554e6684152455241406&q=${search.value}&aqi=no   
     `)
     .then((res)=>{
-    console.log(res.data);
-    card.innerHTML=`
+    // console.log(res.data);
+
+    arrCard = card.innerHTML=`
     <div class='bg-white border border-gray-800 shadow-lg ring ring-gray-700 ring-opacity-50 w-50 mx-auto mt-5 rounded-lg p-4 mb-5'>
             <h1 class='text-2xl'>${res.data.location.name}</h1>
             <p class="text-dark-500">${res.data.location.localtime} ,${res.data.location.country} </p>
@@ -27,8 +27,9 @@ form.addEventListener("submit", (evt)=>{
         console.log(err);
     })
 
+    arr.push(arrCard);
+    console.log(arr);
 })
-
 
 
 
